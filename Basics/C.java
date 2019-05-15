@@ -14,11 +14,6 @@ class B {
  void display() {
   System.out.println("This is from class B");
  }
- 
- public static void main(String[] args) {
-  B b = new B();
-  b.display();
- }
 }
 
 /**
@@ -28,9 +23,18 @@ public class C {
  void displayC() {
   System.out.println("This is from class C");
  }
+}
 
- public static void main(String[] args) {
-  C c = new C();
-  c.displayC();
+/*
+ Call methods display and displayC from class B and class C respectively, 
+ without creating objects of class B and class C in class A.
+*/
+
+/**
+* Two public classes in a single java file are not allowed
+*/
+public class D {
+ void displayD() {
+  System.out.println("This is from class D");
  }
 }
